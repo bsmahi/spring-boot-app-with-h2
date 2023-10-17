@@ -184,6 +184,16 @@ In order to use in-memory database and perform CRUD operations, you need to add 
 </dependency>
 ```
 
+## Application Code
+
+- `ProductController.java`- Acts as a presentation layer where you define all the http endpoints
+- `Product.java` - Act as a POJO class and table structure with attributes in the form of Java class
+- `ProductRepository.java` - Interface which extends JpaRepository which is available from Spring
+- `ProductService.java, ProductServiceImpl.java`- Classes for defining method and implementing those methods in
+  ProductServiceImpl class
+- `Exception` folder - defined for the complete application exception handling
+- `Config` folder - defined for the Swagger OpenAPI
+
 ## H2 Connection Properties
 
 Spring provides effortless configuration options to connect to any database using properties. Below are the
@@ -211,15 +221,12 @@ aforementioned properties options.
 
 - `data.sql` - used for an initial data load to in-memory database
 
-## Application Code
+## Accessing H2 Console
 
-- `ProductController.java`- Acts as a presentation layer where you define all the http endpoints
-- `Product.java` - Act as a POJO class and table structure with attributes in the form of Java class
-- `ProductRepository.java` - Interface which extends JpaRepository which is available from Spring
-- `ProductService.java, ProductServiceImpl.java`- Classes for defining method and implementing those methods in
-  ProductServiceImpl class
-- `Exception` folder - defined for the complete application exception handling
-- `Config` folder - defined for the Swagger OpenAPI
+The console view of the H2 database is disabled by default. It is necessary to enable it in order to access and view it
+through a web browser.
+
+Start the spring boot application and access the console in the browser with this URL : http://localhost:8080/h2-console
 
 ## Dockerize the Application
 
@@ -230,7 +237,7 @@ using something like `docker build`, all we need to do is a simple configuration
 the `spring-boot-maven-plugin`
 
 ```xml
- 
+
 <image>
     <name>bsmahi/${project.artifactId}:${project.version}</name>// here replace `bsmahi` with user docker user name
 </image>
