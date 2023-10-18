@@ -539,6 +539,55 @@ By using Swagger OpenAPI, we can test all the CRUD Operations, by using the foll
 
 ![Image](./images/swaggerapi.png "Swagger API")
 
+### 1. HTTP GET Operation
+
+> http://localhost:8080/api/products
+
+here is the result
+
+![Image](./images/HttpGetOperation.png "Http Get Operation")
+
+### 2. HTTP GET Operation by Fetching Product Details by Id
+
+> http://localhost:8080/api/products/10001
+
+here is the result
+
+![Image](./images/HttpGetOperationById.png "Http Get Operation By ID")
+
+### 3. HTTP POST Operation
+
+Sample POST request payload
+
+```json
+{
+  "title": "Testing",
+  "price": 10,
+  "description": "Testing Description",
+  "category": "Laptop"
+}
+```
+
+here is the result
+
+![Image](./images/HttpPostOperation.png "Http Post Operation")
+
+### 4. HTTP PUT Operation
+
+Pass the id which you would like to update the record, for example, 10001 and along with the sample below payload
+
+here is the result
+
+![Image](./images/HttpPutOperation.png "Http Post Operation")
+
+### 4. HTTP DELETE Operation
+
+Pass the id which you would like to delete, for example, 10001
+
+here is the result
+
+![Image](./images/HttpDeleteOperation.png "Http Post Operation")
+
 ## Capturing Logs and Metrics
 
 We have added actuator dependency for capturing logs and metrics of the application. By accessing the below URL
