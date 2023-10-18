@@ -193,6 +193,8 @@ In order to use in-memory database and perform CRUD operations, you need to add 
   ProductServiceImpl class
 - `Exception` folder - defined for the complete application exception handling
 - `Config` folder - defined for the Swagger OpenAPI
+- `ProductControllerIT.java` - written Integration Test cases
+- `ProductControllerTest.java` - Written UnitTest cases
 
 ## H2 Connection Properties
 
