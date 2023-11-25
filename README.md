@@ -4,6 +4,13 @@ In this application, we are building a simple CRUD application with h2 for produ
 Initially, we shall develop a basic web application utilizing Spring Boot, without resorting to Docker. Subsequently, we
 shall construct a Docker image exclusively for the aforementioned application. Let’s get started.
 
+# Building from source
+
+- git clone https://github.com/bsmahi/spring-boot-app-with-h2.git
+- Change into root dir
+- Run mvn clean install
+- mvn spring-boot:run
+
 ## Pre-requisites
 
 - [Java 17](https://www.oracle.com/java/technologies/downloads/)
